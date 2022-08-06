@@ -9,7 +9,7 @@
     </h1>
 
     <div class="">
-      <a class="link" href="http://localhost/WebDev/Sample/login.html">Logout</a>
+      <a class="link" href="http://localhost/E-commerce_Website/login.html">Logout</a>
     </div>
   </header>
 </div>
