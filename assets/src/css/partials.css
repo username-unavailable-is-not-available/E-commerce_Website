@@ -1,0 +1,23 @@
+.partBoxz {
+  padding: 10px 10px 10px 10px;
+  border: 1px solid whitesmoke;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #3a3a3a;
+}
+
+.partLink {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #3a3a3a;
+}
