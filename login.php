@@ -1,4 +1,25 @@
-<?php require 'session/sessionStart.php';?>
+<?php 
+//require 'session/sessionStart.php';
+
+require 'database/connect.php';
+
+if (isset($_POST['submit'])){
+  session_start();
+
+  if ($_POST['username'] == '' || $_POST['password'] == ''){
+    echo '<script>';
+    echo 'alert("Fields Can not be Empty!");'; 
+    echo '</script>';
+  } else {
+    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['password'] = $_POST['password'];
+
+    header('Location: users/dashboard.html');
+  }
+}
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +34,7 @@
   <body>
     <h1>Login</h1>
 
-    <form action="login.html" method="post">
+    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
       <div class="container">
         <table>
           <tr>
@@ -35,7 +56,7 @@
       </div>
       <div class="container">
         <button>
-          <input type="submit" value="Login" />
+          <input type="submit" name="submit" value="Login" />
         </button>
       </div>
       <div class="centerLink">
@@ -45,9 +66,6 @@
         </p>
       </div>
     </form>
-
-    <?php require 'session/sessionView.php';?>
-
   </body>
 
   </html>

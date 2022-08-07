@@ -1,85 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration</title>
-    <link rel="stylesheet" href="assets/src/css/global.css">
-    <link rel="stylesheet" href="assets/src/css/table.css">
-    
-    <script src="assets/src/validation/validation.js" ></script>
-    
-</head>
-<body>
+    <link rel="stylesheet" href="assets/src/css/global.css" />
+    <link rel="stylesheet" href="assets/src/css/table.css" />
+
+    <script src="assets/src/validation/validation.js"></script>
+  </head>
+  <body>
     <h1>Registration</h1>
 
-    <form name="regForm" onsubmit="return validateForm()" action="database/dataInsert.php" method="post">
-        <div class="container">
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <td>
-                        <input type="text" name="name" id="name">
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        Username
-                    </th>
-                    <td>
-                        <input type="text" name="username" id="username">
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        Email
-                    </th>
-                    <td>
-                        <input type="text" name="email" id="email">
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        Gender
-                    </th>
-                    <td>
-                        <label>Male</label>
-                        <input type="radio" name="gender" id="gender">
+    <form
+      name="regForm"
+      onsubmit="return validateName(), validateUname(), validateEmail(), validatePassword(), validateRpass()"
+      action="database/dataInsert.php"
+      method="post"
+    >
+      <div class="container">
+        <table>
+          <tr>
+            <th>Name</th>
+            <td>
+              <input type="text" name="name" id="name" />
+            </td>
+          </tr>
+          <tr>
+            <th>Username</th>
+            <td>
+              <input type="text" name="username" id="username" />
+            </td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td>
+              <input type="text" name="email" id="email" />
+            </td>
+          </tr>
+          <tr>
+            <th>Gender</th>
+            <td>
+              <label>Male</label>
+              <input type="radio" name="gender" id="gender" value="m" />
 
-                        <label>Female</label>
-                        <input type="radio" name="gender" id="gender">
+              <label>Female</label>
+              <input type="radio" name="gender" id="gender" value="f" />
 
-                        <label>Other</label>
-                        <input type="radio" name="gender" id="gender">
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        Password
-                    </th>
-                    <td>
-                        <input type="text" name="password" id="password">
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        Retype Password
-                    </th>
-                    <td>
-                        <input type="text" name="repass" id="repass">
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="container">
-            <button>
-                <input type="submit" value="Submit">
-            </button>
-            <button>
-                <input type="reset" value="Reset">
-            </button>
-        </div>
+              <label>Other</label>
+              <input type="radio" name="gender" id="gender" value="o" />
+            </td>
+          </tr>
+          <tr>
+            <th>Password</th>
+            <td>
+              <input type="text" name="password" id="password" />
+            </td>
+          </tr>
+          <tr>
+            <th>Retype Password</th>
+            <td>
+              <input type="text" name="repass" id="repass" />
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="container">
+        <button>
+          <input type="submit" value="Submit" />
+        </button>
+        <button>
+          <input type="reset" value="Reset" />
+        </button>
+      </div>
     </form>
-</body>
+  </body>
 </html>

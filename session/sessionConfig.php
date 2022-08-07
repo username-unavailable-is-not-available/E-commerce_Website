@@ -1,8 +1,8 @@
 <?php
 
-if (isset($_POST['login'])) {
+if (isset($_POST['submit'])) {
     $username = $_POST['username'];
-    $paswword = $_POST['password'];
+    $password = $_POST['password'];
 
     $select = mysqli_query($conn, "select * from userInfo where username='$username' and password='$password'");
 
@@ -17,7 +17,7 @@ if (isset($_POST['login'])) {
         //echo 'window.location.href = "login.html"';
         //echo '</script>';
 
-        echo "Baal Falao?";
+        echo "???????";
     }
 }
 

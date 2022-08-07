@@ -1,4 +1,14 @@
-<?php session_start(); ?>
+<?php 
+
+session_start();
+
+if ($_SERVER['QUERY_STRING'] == 'noname'){
+  session_unset();
+}
+
+$username = $_SESSION['username'];
+
+?>
 
 <div>
   <header class="partBox">
@@ -9,7 +19,7 @@
     </h1>
 
     <div class="">
-      <a class="link" href="http://localhost/E-commerce_Website/login.html">Logout</a>
+      <a class="link" href="http://localhost/E-commerce_Website/login.php">Logout</a>
     </div>
   </header>
 </div>
