@@ -22,13 +22,13 @@ function validateEmail(){
   }
 }
 
-/*function validateGender(){
+function validateGender(){
   let d = document.forms["regForm"]["gender"].value;
   if (d == '') {
     alert("Gender Can Not Be Empty");
     return false;
   }
-}*/
+}
 
 function validatePassword(){
   let e = document.forms["regForm"]["password"].value;
