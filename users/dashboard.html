@@ -1,36 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manager</title>
-    <link rel="stylesheet" href="../assets/src/css/global.css">
-    <link rel="stylesheet" href="../assets/src/css/partials.css">
-    <link rel="stylesheet" href="">
-</head>
-<body>
+    <link rel="stylesheet" href="../assets/src/css/global.css" />
+    <link rel="stylesheet" href="../assets/src/css/partials.css" />
+
+    <script src="../assets/src/js/contentPage.js"></script>
+  </head>
+  <body>
     <?php include '../assets/src/partials/header.dashboard.php'; ?>
 
-    <div class="">
-        </div>
-        <div class="">
-            <ul class="sidebarNav">
-                <li>
-                    <a class="link" href="">D1</a>
-                </li><br>
-                <li>
-                    <a class="link" href="">D2</a>
-                </li><br>
-                <li>
-                    <a class="link" href="">D3</a>
-                </li><br><br><br>
-                <li>
-                    <a class="link" href="">Settings</a>
-                </li>
-            </ul>
-        </div>
+    <div>
+      <ul class="sidebarNav">
+        <li>
+          <a class="link" href="#page2">Employee List</a>
+        </li>
+        <br />
+        <li id="page1" onclick="nextpage">
+          <a class="link" href="">Vendor List</a>
+        </li>
+        <br />
+        <li id="page1" onclick="nextpage">
+          <a class="link" href="ProductList.php">Product List</a>
+        </li>
+        <br /><br /><br />
+        <li id="page1" onclick="nextpage">
+          <a class="link" href="Settings.php">Settings</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <div id="page1">
+        <h1>User Dashboard</h1>
+      </div>
+      <div class="hidden" id="page2" onclick="nextpage">
+        <html>
+          <head>
+            <title>Employee List</title>
+          </head>
+
+          ADMIN PANEL
+          <br />
+          <br />
+          Name:Khaled Nofel<br />
+          Cell:01671796506<br />
+          Email:nofelbangla@gmail.com<br />
+
+          <br />
+          Name:Yeasin Elahi<br />
+          Cell:01715867279<br />
+          Emali:yeasinbangla@gmail.com<br />
+          <br />
+
+          <br />
+          <br />
+          MANAGER PANEL
+          <br />
+          <br />
+          Name:Nazmul Hasan<br />
+          Cell:01717977279<br />
+          Email:nazmulbangla@gmail.com<br />
+          <br />
+          Name:Manju Mia<br />
+          Cell:01717975259<br />
+          Email:nmanjubangla@gmail.com<br />
+
+          <br />
+
+          <br />
+          <br />
+          DELIVERY PANAL
+          <br />
+          <br />
+          Name:Motin Mia<br />
+          Cell:0157772662<br />
+          <br />
+          Name:MD Raju<br />
+          Cell:01651522232<br />
+
+          <body>
+            <br />
+            <br />
+            <a href="http://localhost/E-commerce_Website/users/dashboard.html"
+              >Go Back</a
+            >
+          </body>
+        </html>
+      </div>
+    </div>
 
     <?php include '../assets/src/partials/footer.html'; ?>
-</body>
+  </body>
 </html>

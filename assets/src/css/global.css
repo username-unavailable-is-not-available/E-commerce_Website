@@ -28,3 +28,16 @@ body {
   padding-bottom: 150px;
   margin-left: 15px;
 }
+
+.box {
+  float: right;
+  width: auto;
+  height: auto;
+  padding: auto;
+  margin-top: -520px;
+  border: 1px solid whitesmoke;
+}
+
+.hidden  {
+  display: none;
+}

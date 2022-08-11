@@ -13,7 +13,7 @@ $username = $_SESSION['username'];
 <div>
   <header class="partBox">
     <h1>
-      <a href="" class="partLink">
+      <a href="http://localhost/E-commerce_Website/users/dashboard.html" class="partLink">
         <span><?php echo $username; ?></span>
       </a>
     </h1>
